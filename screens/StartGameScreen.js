@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
+import StartScreenButton from '../components/StartScreenButton';
 
 const StartGameScreen = props => {
   return (
@@ -11,8 +12,8 @@ const StartGameScreen = props => {
       <View>
         <Text>What would you like to study?</Text>
         <View style={styles.buttonContainer}>
-          <Button style={styles.button} title="hiragana" />
-          <Button style={styles.button} title="katakana" />
+          <StartScreenButton textLine1="ひらがな" textLine2="hiragana" />
+          <StartScreenButton textLine1="カタカナ" textLine2="katakana" />
         </View>
       </View>
     </View>
@@ -28,7 +29,9 @@ const styles = StyleSheet.create({
     fontSize: 80,
     textTransform: 'uppercase'
   },
-  directions: {},
+  directions: {
+
+  },
   buttonContainer: {
     flexDirection: 'row',
     width: '100%',
