@@ -3,15 +3,17 @@ import { View, Text, Button, StyleSheet } from 'react-native';
 import StartScreenButton from '../components/StartScreenButton';
 
 const StartGameScreen = props => {
+  const { screen, title, directions, buttonContainer } = styles;
+
   return (
-    <View style={styles.screen}>
-      <Text style={styles.title}>Kana Study</Text>
-      <Text style={styles.directions}>
+    <View style={screen}>
+      <Text style={title}>Kana Study</Text>
+      <Text style={directions}>
         Select either hiragana or katakana to study. Enter your answer in romaji.
       </Text>
       <View>
         <Text>What would you like to study?</Text>
-        <View style={styles.buttonContainer}>
+        <View style={buttonContainer}>
           <StartScreenButton textLine1="ひらがな" textLine2="hiragana" />
           <StartScreenButton textLine1="カタカナ" textLine2="katakana" />
         </View>
